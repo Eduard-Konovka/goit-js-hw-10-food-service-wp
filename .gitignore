@@ -1,11 +1,11 @@
 # Settings
-.DS_Store 
-.vscode
-.idea
+.DS_Store/
+.vscode/
+.idea/
 
 # Output
-build
-dist
+build/
+dist/
 
 # Logs
 logs
@@ -47,8 +47,8 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules
-jspm_packages
+node_modules/
+jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
