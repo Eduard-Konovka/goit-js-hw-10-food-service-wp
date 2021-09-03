@@ -32,7 +32,7 @@ module.exports = {
         loader: 'handlebars-loader',
       },
       {
-        test: /\.svg$/i,
+        test: /\.(png|jpg|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
