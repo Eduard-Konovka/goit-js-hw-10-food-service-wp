@@ -27,7 +27,17 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-      { test: /\.handlebars$/, loader: 'handlebars-loader' },
+      {
+        test: /\.handlebars$/,
+        loader: 'handlebars-loader',
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        },
+      },
     ],
   },
   plugins: [
