@@ -1,16 +1,16 @@
 import refs from './refs'
 
-const THEME = {
+const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 }
 
 if (!localStorage.getItem('class')) {
-  localStorage.setItem('class', THEME.LIGHT)
-  refs.body.classList.add(THEME.LIGHT)
+  localStorage.setItem('class', Theme.LIGHT)
+  refs.body.classList.add(Theme.LIGHT)
 } else {
   refs.body.classList.add(localStorage.getItem('class'))
-  if (localStorage.getItem('class') === THEME.LIGHT) {
+  if (localStorage.getItem('class') === Theme.LIGHT) {
     refs.inputCheckbox.checked = false
   } else {
     refs.inputCheckbox.checked = true
@@ -18,11 +18,11 @@ if (!localStorage.getItem('class')) {
 }
 
 refs.inputCheckbox.addEventListener('change', () => {
-  if (localStorage.getItem('class') === THEME.LIGHT) {
-    localStorage.setItem('class', THEME.DARK)
-    refs.body.classList.replace(THEME.LIGHT, THEME.DARK)
+  if (localStorage.getItem('class') === Theme.LIGHT) {
+    localStorage.setItem('class', Theme.DARK)
+    refs.body.classList.replace(Theme.LIGHT, Theme.DARK)
   } else {
-    localStorage.setItem('class', THEME.LIGHT)
-    refs.body.classList.replace(THEME.DARK, THEME.LIGHT)
+    localStorage.setItem('class', Theme.LIGHT)
+    refs.body.classList.replace(Theme.DARK, Theme.LIGHT)
   }
 })
